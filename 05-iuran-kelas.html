@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>05 — Iuran Kelas | Aplikasi Pengelolaan Iuran Kas Kelas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar"><span><b>05 / 07 — Iuran Kelas</b></span><span>WIREFRAME DESKTOP • Pencatatan iuran per siswa</span></div>
+  <header class="appbar"><h1>Aplikasi Pengelolaan Iuran Kas Kelas</h1><span class="meta">Kelas TI-1A | Bendahara</span></header>
+  <nav class="nav">
+    <a href="03-dashboard.html">Dashboard</a>
+    <a href="04-kategori.html">Kategori</a>
+    <a class="active" href="05-iuran-kelas.html">Iuran Kelas</a>
+    <a href="06-transaksi.html">Transaksi</a>
+    <a href="07-laporan.html">Laporan</a>
+    <a href="02-login.html">Keluar</a>
+  </nav>
+
+  <main>
+    <div class="page-title">
+      <h2>Iuran Kelas</h2>
+      <span class="range">Periode Oktober 2026</span>
+      <p>Kelas TI-1A • 30 siswa • Iuran per siswa Rp20.000 per bulan.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="k">Target Iuran</div><div class="v">Rp600.000</div><div class="d">30 siswa × Rp20.000</div></div>
+      <div class="stat"><div class="k">Iuran Terkumpul</div><div class="v">Rp480.000</div><div class="d">24 siswa lunas</div></div>
+      <div class="stat"><div class="k">Tunggakan Iuran</div><div class="v">Rp120.000</div><div class="d">6 siswa belum bayar • Bukan saldo kas</div></div>
+    </div>
+
+    <section class="panel">
+      <h3>Status pembayaran siswa</h3>
+      <p class="sub">Pantau tagihan, pembayaran, dan sisa iuran setiap siswa.</p>
+      <div class="row c4" style="grid-template-columns:1fr 1fr 2fr auto;margin-bottom:16px">
+        <div><label for="per">Periode</label><select id="per"><option>Oktober 2026</option></select></div>
+        <div><label for="st">Status</label><select id="st"><option>Semua Status</option><option>Lunas</option><option>Belum bayar</option></select></div>
+        <div><label for="q">Pencarian Nama / NIM</label><input id="q" type="text" placeholder="Masukkan nama siswa atau NIM"></div>
+        <button class="btn" type="button">Cari / Filter</button>
+      </div>
+      <table>
+        <thead><tr><th>Nama Siswa</th><th>NIM</th><th>Periode</th><th>Tagihan</th><th>Dibayar</th><th>Sisa</th><th>Status</th><th>Aksi</th></tr></thead>
+        <tbody>
+          <tr><td>Andi Pratama</td><td>2601001</td><td>Okt 2026</td><td>Rp20.000</td><td>Rp20.000</td><td>Rp0</td><td><span class="tag ok">Lunas</span></td><td class="act"><a href="#">Edit</a></td></tr>
+          <tr><td>Budi Santoso</td><td>2601002</td><td>Okt 2026</td><td>Rp20.000</td><td>Rp20.000</td><td>Rp0</td><td><span class="tag ok">Lunas</span></td><td class="act"><a href="#">Edit</a></td></tr>
+          <tr><td>Citra Lestari</td><td>2601003</td><td>Okt 2026</td><td>Rp20.000</td><td>Rp20.000</td><td>Rp0</td><td><span class="tag ok">Lunas</span></td><td class="act"><a href="#">Edit</a></td></tr>
+          <tr><td>Dinda Putri</td><td>2601004</td><td>Okt 2026</td><td>Rp20.000</td><td>Rp20.000</td><td>Rp0</td><td><span class="tag ok">Lunas</span></td><td class="act"><a href="#">Edit</a></td></tr>
+          <tr><td>Eko Saputra</td><td>2601005</td><td>Okt 2026</td><td>Rp20.000</td><td>Rp0</td><td>Rp20.000</td><td><span class="tag warn">Belum bayar</span></td><td class="act"><a href="#">Catat Pembayaran</a></td></tr>
+          <tr><td>Fajar Ramadhan</td><td>2601006</td><td>Okt 2026</td><td>Rp20.000</td><td>Rp0</td><td>Rp20.000</td><td><span class="tag warn">Belum bayar</span></td><td class="act"><a href="#">Catat Pembayaran</a></td></tr>
+        </tbody>
+      </table>
+      <div class="tablefoot"><span>Menampilkan sebagian data: 6 dari 30 siswa</span><span>Seluruh kelas: 24 lunas • 6 belum bayar</span></div>
+    </section>
+
+    <section class="panel">
+      <h3>Form Catat Pembayaran</h3>
+      <p class="sub">Form pembayaran terpisah dari daftar siswa. Pilih Edit pada tabel untuk memperbarui pembayaran.</p>
+      <form onsubmit="return false">
+        <div class="row c3">
+          <div><label for="sw">Siswa</label><select id="sw"><option>Pilih siswa / NIM</option></select></div>
+          <div><label for="pi">Periode Iuran</label><select id="pi"><option>Oktober 2026</option></select></div>
+          <div><label for="tb">Tanggal Bayar</label><input id="tb" type="text" placeholder="dd / mm / yyyy"></div>
+        </div>
+        <div class="row" style="grid-template-columns:1fr 2fr;margin-top:14px">
+          <div><label for="nom">Nominal</label><input id="nom" type="text" value="Rp20.000"></div>
+          <div><label for="ket">Keterangan</label><input id="ket" type="text" placeholder="Contoh: Pembayaran iuran Oktober 2026"></div>
+        </div>
+        <div class="actions"><button class="btn" type="submit">Simpan</button><button class="btn ghost" type="reset">Batal</button></div>
+      </form>
+    </section>
+
+    <div class="hint"><b>Penting:</b> pembayaran iuran dicatat sekali sebagai transaksi Pemasukan berkategori Iuran Kas, dengan siswa dan periode terkait. Data pada Iuran Kelas dan Transaksi merujuk pembayaran yang sama agar tidak dihitung ganda. Tunggakan Rp120.000 belum menjadi pemasukan.</div>
+  </main>
+
+  <footer class="footer"><span>Rancangan struktur &amp; fungsi • Bukan prototipe interaktif</span><span>05 Iuran Kelas</span></footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* Aplikasi Pengelolaan Iuran Kas Kelas - gaya wireframe (grayscale) */
+:root {
+  --ink: #1f1f1f;
+  --muted: #666;
+  --line: #8a8a8a;
+  --soft: #f2f2f2;
+  --head: #ececec;
+  --btn: #dcdcdc;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: #fff;
+  font-size: 14px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+a { color: inherit; text-decoration: none; }
+
+/* Bar atas (nomor slide + kode wireframe) */
+.topbar {
+  background: var(--head);
+  border-bottom: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 36px; font-size: 12px; color: var(--muted);
+}
+.topbar b { color: var(--ink); font-size: 13px; }
+
+/* Header aplikasi */
+.appbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 36px; border-bottom: 1px solid var(--line);
+}
+.appbar h1 { font-size: 20px; font-weight: 700; }
+.appbar .meta { font-size: 13px; color: var(--muted); }
+
+/* Navigasi */
+.nav {
+  display: flex; gap: 10px; padding: 10px 36px;
+  border-bottom: 1px solid var(--line);
+}
+.nav a { padding: 8px 18px; font-size: 13px; border: 1px solid transparent; }
+.nav a.active { border: 2px solid var(--ink); background: var(--btn); font-weight: 600; }
+
+main { flex: 1; padding: 28px 36px; }
+main.center { display: flex; align-items: center; justify-content: center; padding: 60px 36px; }
+
+/* Footer */
+.footer {
+  display: flex; justify-content: space-between;
+  padding: 14px 36px; border-top: 1px solid var(--line);
+  font-size: 11px; color: var(--muted);
+}
+
+/* Halaman auth (registrasi / login) */
+.auth { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; width: 100%; max-width: 1000px; align-items: center; }
+.eyebrow { font-size: 12px; letter-spacing: .5px; color: var(--muted); text-transform: uppercase; margin-bottom: 14px; }
+.auth h2 { font-size: 30px; line-height: 1.2; margin-bottom: 18px; }
+.auth p.lead { font-size: 15px; line-height: 1.7; color: #555; margin-bottom: 24px; }
+.note { background: var(--soft); border: 1px solid var(--line); padding: 14px 16px; font-size: 12px; line-height: 1.6; color: #555; }
+.card { border: 1px solid var(--line); padding: 20px 20px 22px; background: #fff; }
+.card h3 { font-size: 16px; margin-bottom: 4px; }
+.card .sub { font-size: 11px; color: var(--muted); margin-bottom: 14px; }
+
+/* Form */
+label { display: block; font-size: 12px; margin: 12px 0 6px; font-weight: 500; }
+input, select, textarea {
+  width: 100%; height: 40px; padding: 0 12px;
+  border: 1.5px solid var(--line); background: #fff;
+  font: inherit; font-size: 12px; color: var(--ink);
+}
+input::placeholder { color: #777; }
+select { appearance: none; background: #fff; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 40px; padding: 0 22px; border: 2px solid var(--ink);
+  background: var(--btn); font: inherit; font-weight: 600; font-size: 13px; cursor: pointer;
+}
+.btn.block { width: 100%; margin-top: 18px; }
+.btn.ghost { background: #fff; border: 1.5px solid var(--line); font-weight: 500; }
+.btn.sm { height: 30px; padding: 0 12px; font-size: 12px; border-width: 1.5px; }
+.switch { text-align: center; margin-top: 14px; font-size: 13px; color: var(--muted); }
+.switch a { color: var(--ink); font-weight: 700; text-decoration: underline; }
+
+/* Judul halaman */
+.page-title h2 { font-size: 26px; margin-bottom: 4px; }
+.page-title p { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+.page-title .range { float: right; font-size: 13px; color: var(--muted); margin-top: -34px; }
+
+/* Panel */
+.panel { border: 1px solid var(--line); padding: 18px 20px; margin-bottom: 18px; background: #fff; }
+.panel h3 { font-size: 16px; margin-bottom: 4px; }
+.panel .sub { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+.panel-head { display: flex; justify-content: space-between; align-items: flex-start; }
+
+/* Kartu statistik */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 18px; }
+.stat { border: 1px solid var(--line); padding: 18px 20px; }
+.stat .k { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+.stat .v { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+.stat .d { font-size: 11px; color: var(--muted); }
+
+/* Tabel */
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; }
+th { background: var(--head); font-weight: 600; }
+tr.total td { background: var(--head); font-weight: 700; }
+td.act { white-space: nowrap; }
+td.act a { text-decoration: underline; margin-right: 10px; }
+.tag { display: inline-block; padding: 2px 8px; border: 1px solid var(--line); font-size: 11px; }
+.tag.ok { background: var(--soft); }
+.tag.warn { background: #fff; border-style: dashed; }
+
+.tablefoot { margin-top: 10px; font-size: 11px; color: var(--muted); display: flex; justify-content: space-between; }
+
+/* Grid helper */
+.row { display: grid; gap: 14px; align-items: end; }
+.row.c3 { grid-template-columns: repeat(3, 1fr); }
+.row.c4 { grid-template-columns: repeat(4, 1fr); }
+.row.c5 { grid-template-columns: repeat(4, 1fr) auto; }
+.row.c6 { grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr auto; }
+.row.c2 { grid-template-columns: 1fr 2fr; }
+.row label { margin-top: 0; }
+.actions { display: flex; gap: 10px; margin-top: 16px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.big { font-size: 26px; font-weight: 700; margin: 6px 0; }
+.line-sum { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #ddd; font-size: 13px; }
+.progress { display: flex; gap: 10px; margin: 8px 0; }
+.progress .tag { font-size: 12px; padding: 4px 12px; }
+.tabs { display: flex; gap: 8px; margin: 12px 0 16px; }
+.tabs span { padding: 7px 16px; border: 1px solid var(--line); font-size: 12px; }
+.tabs span.on { background: var(--btn); border: 2px solid var(--ink); font-weight: 600; }
+.hint { font-size: 12px; color: #555; background: var(--soft); border: 1px solid var(--line); padding: 12px 16px; line-height: 1.6; }
+.right { text-align: right; }
+.mt { margin-top: 18px; }

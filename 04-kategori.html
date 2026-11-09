@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>04 — Kategori | Aplikasi Pengelolaan Iuran Kas Kelas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar"><span><b>04 / 07 — Kategori</b></span><span>WIREFRAME DESKTOP • FR-03/04 · CRUD kategori</span></div>
+  <header class="appbar"><h1>Aplikasi Pengelolaan Iuran Kas Kelas</h1><span class="meta">Kelas TI-1A | Bendahara</span></header>
+  <nav class="nav">
+    <a href="03-dashboard.html">Dashboard</a>
+    <a class="active" href="04-kategori.html">Kategori</a>
+    <a href="05-iuran-kelas.html">Iuran Kelas</a>
+    <a href="06-transaksi.html">Transaksi</a>
+    <a href="07-laporan.html">Laporan</a>
+    <a href="02-login.html">Keluar</a>
+  </nav>
+
+  <main>
+    <div class="page-title">
+      <h2>Kategori</h2>
+      <p>Kelola kategori pemasukan dan pengeluaran kas kelas.</p>
+    </div>
+
+    <div class="tabs"><span class="on">Daftar kategori</span><span>Form Tambah Kategori</span></div>
+    <p class="sub" style="font-size:12px;color:var(--muted);margin-bottom:14px">Kategori untuk pengelompokan transaksi kas kelas. Form terpisah dari daftar. Pilih Edit untuk mengubah kategori yang sudah ada.</p>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h3>4 kategori terdaftar</h3>
+        <button class="btn sm" type="button">Tambah Kategori</button>
+      </div>
+      <div class="row c3" style="grid-template-columns:2fr 1fr auto;margin:14px 0">
+        <div><label for="cari">Pencarian</label><input id="cari" type="text" placeholder="Cari nama kategori"></div>
+        <div><label for="fjenis">Filter Jenis</label>
+          <select id="fjenis"><option>Semua Jenis</option><option>Pemasukan</option><option>Pengeluaran</option></select></div>
+        <button class="btn" type="button">Cari / Filter Jenis</button>
+      </div>
+      <table>
+        <thead><tr><th>Nama Kategori</th><th>Jenis</th><th>Keterangan</th><th>Aksi</th></tr></thead>
+        <tbody>
+          <tr><td>Iuran Kas</td><td>Pemasukan</td><td>Iuran rutin siswa setiap bulan</td><td class="act"><a href="#">Edit</a><a href="#">Hapus</a></td></tr>
+          <tr><td>Donasi</td><td>Pemasukan</td><td>Sumbangan untuk kas kelas</td><td class="act"><a href="#">Edit</a><a href="#">Hapus</a></td></tr>
+          <tr><td>ATK</td><td>Pengeluaran</td><td>Kebutuhan alat tulis kelas</td><td class="act"><a href="#">Edit</a><a href="#">Hapus</a></td></tr>
+          <tr><td>Kebersihan</td><td>Pengeluaran</td><td>Perlengkapan kebersihan kelas</td><td class="act"><a href="#">Edit</a><a href="#">Hapus</a></td></tr>
+        </tbody>
+      </table>
+      <div class="tablefoot"><span>Menampilkan 4 dari 4 kategori • Pemasukan: 2 • Pengeluaran: 2</span></div>
+    </section>
+
+    <section class="panel">
+      <h3>Tambah Kategori</h3>
+      <p class="sub">Isian baru untuk kategori transaksi.</p>
+      <form onsubmit="return false">
+        <div class="row" style="grid-template-columns:1fr 1fr">
+          <div><label for="nk">Nama Kategori</label><input id="nk" type="text" placeholder="Masukkan nama kategori"></div>
+          <div><label for="jk">Jenis</label>
+            <select id="jk"><option>Pilih Pemasukan / Pengeluaran</option><option>Pemasukan</option><option>Pengeluaran</option></select></div>
+        </div>
+        <label for="ket">Keterangan</label>
+        <input id="ket" type="text" placeholder="Jelaskan kegunaan kategori">
+        <div class="actions"><button class="btn" type="submit">Simpan</button><button class="btn ghost" type="reset">Batal</button></div>
+      </form>
+    </section>
+
+    <div class="hint">Tambah Kategori membuka isian baru. Edit memuat data kategori pada formulir, sedangkan Hapus digunakan untuk menghapus kategori yang tidak digunakan dalam transaksi.</div>
+  </main>
+
+  <footer class="footer"><span>Rancangan struktur &amp; fungsi • Bukan prototipe interaktif</span><span>04 Kategori</span></footer>
+</body>
+</html>

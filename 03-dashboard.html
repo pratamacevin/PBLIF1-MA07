@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>03 — Dashboard | Aplikasi Pengelolaan Iuran Kas Kelas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar"><span><b>03 / 07 — Dashboard</b></span><span>WIREFRAME DESKTOP • FR-11 · Ringkasan kas</span></div>
+  <header class="appbar"><h1>Aplikasi Pengelolaan Iuran Kas Kelas</h1><span class="meta">Kelas TI-1A | Bendahara</span></header>
+  <nav class="nav">
+    <a class="active" href="03-dashboard.html">Dashboard</a>
+    <a href="04-kategori.html">Kategori</a>
+    <a href="05-iuran-kelas.html">Iuran Kelas</a>
+    <a href="06-transaksi.html">Transaksi</a>
+    <a href="07-laporan.html">Laporan</a>
+    <a href="02-login.html">Keluar</a>
+  </nav>
+
+  <main>
+    <div class="page-title">
+      <h2>Dashboard</h2>
+      <span class="range">01–31 Oktober 2026</span>
+      <p>Ringkasan kas kelas TI-1A dan pembayaran iuran siswa.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="k">Total Pemasukan</div><div class="v">Rp600.000</div><div class="d">25 transaksi diterima</div></div>
+      <div class="stat"><div class="k">Total Pengeluaran</div><div class="v">Rp150.000</div><div class="d">2 transaksi dikeluarkan</div></div>
+      <div class="stat"><div class="k">Saldo Kas</div><div class="v">Rp450.000</div><div class="d">Pemasukan − pengeluaran</div></div>
+    </div>
+
+    <div class="two">
+      <section class="panel">
+        <h3>Ringkasan periode</h3>
+        <p class="sub">01–31 Oktober 2026 • Saldo awal periode Rp0</p>
+        <div class="line-sum"><span>Iuran Kas · 24 pembayaran × Rp20.000</span><b>Rp480.000</b></div>
+        <div class="line-sum"><span>Donasi · 1 transaksi</span><b>Rp120.000</b></div>
+        <div class="line-sum"><span>ATK Rp100.000 + Kebersihan Rp50.000</span><b>Rp150.000</b></div>
+      </section>
+
+      <section class="panel">
+        <h3>Pembayaran iuran Oktober</h3>
+        <p class="sub">30 siswa • Iuran per siswa Rp20.000 • Target Rp600.000</p>
+        <div class="progress"><span class="tag ok">24 lunas</span><span class="tag warn">6 belum bayar</span></div>
+        <div class="line-sum"><span>Terkumpul</span><b>Rp480.000</b></div>
+        <div class="line-sum"><span>Tunggakan</span><b>Rp120.000</b></div>
+        <p class="mt"><a href="05-iuran-kelas.html" style="text-decoration:underline">Lihat status siswa di Iuran Kelas</a></p>
+      </section>
+    </div>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><h3>Transaksi terbaru</h3><p class="sub">Cuplikan 5 dari 27 transaksi pada periode Oktober 2026.</p></div>
+      </div>
+      <table>
+        <thead><tr><th>Tanggal</th><th>Jenis</th><th>Kategori</th><th>Nominal</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>28 Okt 2026</td><td>Pemasukan</td><td>Iuran Kas</td><td>Rp20.000</td><td>Budi Santoso • Iuran Oktober 2026</td></tr>
+          <tr><td>27 Okt 2026</td><td>Pemasukan</td><td>Iuran Kas</td><td>Rp20.000</td><td>Citra Lestari • Iuran Oktober 2026</td></tr>
+          <tr><td>26 Okt 2026</td><td>Pemasukan</td><td>Iuran Kas</td><td>Rp20.000</td><td>Dinda Putri • Iuran Oktober 2026</td></tr>
+          <tr><td>15 Okt 2026</td><td>Pengeluaran</td><td>ATK</td><td>Rp100.000</td><td>Pembelian alat tulis kelas</td></tr>
+          <tr><td>10 Okt 2026</td><td>Pengeluaran</td><td>Kebersihan</td><td>Rp50.000</td><td>Pembelian perlengkapan kebersihan</td></tr>
+        </tbody>
+      </table>
+      <div class="tablefoot"><span>25 pemasukan • 2 pengeluaran</span><a href="06-transaksi.html" style="text-decoration:underline">Lihat Semua Transaksi</a></div>
+    </section>
+
+    <div class="hint">Saldo kas Rp450.000 adalah dana yang sudah diterima dikurangi pengeluaran. Tunggakan iuran Rp120.000 belum diterima dan tidak termasuk pemasukan.</div>
+  </main>
+
+  <footer class="footer"><span>Rancangan struktur &amp; fungsi • Bukan prototipe interaktif</span><span>03 Dashboard</span></footer>
+</body>
+</html>

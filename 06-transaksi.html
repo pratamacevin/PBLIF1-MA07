@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>06 — Transaksi | Aplikasi Pengelolaan Iuran Kas Kelas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar"><span><b>06 / 07 — Transaksi</b></span><span>WIREFRAME DESKTOP • FR-05/06 · CRUD transaksi | FR-07/08 · Cari &amp; filter</span></div>
+  <header class="appbar"><h1>Aplikasi Pengelolaan Iuran Kas Kelas</h1><span class="meta">Kelas TI-1A | Bendahara</span></header>
+  <nav class="nav">
+    <a href="03-dashboard.html">Dashboard</a>
+    <a href="04-kategori.html">Kategori</a>
+    <a href="05-iuran-kelas.html">Iuran Kelas</a>
+    <a class="active" href="06-transaksi.html">Transaksi</a>
+    <a href="07-laporan.html">Laporan</a>
+    <a href="02-login.html">Keluar</a>
+  </nav>
+
+  <main>
+    <div class="page-title">
+      <h2>Transaksi</h2>
+      <p>Catat dan telusuri seluruh pemasukan serta pengeluaran kas kelas TI-1A.</p>
+    </div>
+
+    <section class="panel">
+      <h3>Cari &amp; filter transaksi</h3>
+      <div class="row" style="grid-template-columns:2fr 1fr 1fr 1fr 1fr;margin-top:12px">
+        <div><label for="kw">Kata Kunci</label><input id="kw" type="text" placeholder="Cari keterangan / nama siswa"></div>
+        <div><label for="fj">Jenis</label><select id="fj"><option>Semua Jenis</option><option>Pemasukan</option><option>Pengeluaran</option></select></div>
+        <div><label for="fk">Kategori</label><select id="fk"><option>Semua Kategori</option><option>Iuran Kas</option><option>Donasi</option><option>ATK</option><option>Kebersihan</option></select></div>
+        <div><label for="tm">Tanggal Mulai</label><input id="tm" type="text" value="01 / 10 / 2026"></div>
+        <div><label for="ts">Tanggal Selesai</label><input id="ts" type="text" value="31 / 10 / 2026"></div>
+      </div>
+      <div class="actions"><button class="btn" type="button">Cari / Filter</button><button class="btn ghost" type="reset">Reset</button></div>
+    </section>
+
+    <section class="panel">
+      <h3>Daftar transaksi</h3>
+      <p class="sub">Periode 01–31 Oktober 2026 • Urutan tanggal terbaru.</p>
+      <table>
+        <thead><tr><th>Tanggal</th><th>Jenis</th><th>Kategori</th><th>Nominal</th><th>Keterangan</th><th>Aksi</th></tr></thead>
+        <tbody>
+          <tr><td>28 Okt 2026</td><td>Pemasukan</td><td>Iuran Kas</td><td>Rp20.000</td><td>Budi Santoso • Iuran Oktober 2026</td><td class="act"><a href="#">Edit</a><a href="#">Hapus</a></td></tr>
+          <tr><td>27 Okt 2026</td><td>Pemasukan</td><td>Iuran Kas</td><td>Rp20.000</td><td>Citra Lestari • Iuran Oktober 2026</td><td class="act"><a href="#">Edit</a><a href="#">Hapus</a></td></tr>
+          <tr><td>26 Okt 2026</td><td>Pemasukan</td><td>Iuran Kas</td><td>Rp20.000</td><td>Dinda Putri • Iuran Oktober 2026</td><td class="act"><a href="#">Edit</a><a href="#">Hapus</a></td></tr>
+          <tr><td>15 Okt 2026</td><td>Pengeluaran</td><td>ATK</td><td>Rp100.000</td><td>Pembelian alat tulis kelas</td><td class="act"><a href="#">Edit</a><a href="#">Hapus</a></td></tr>
+          <tr><td>10 Okt 2026</td><td>Pengeluaran</td><td>Kebersihan</td><td>Rp50.000</td><td>Pembelian perlengkapan kebersihan</td><td class="act"><a href="#">Edit</a><a href="#">Hapus</a></td></tr>
+          <tr><td>03 Okt 2026</td><td>Pemasukan</td><td>Donasi</td><td>Rp120.000</td><td>Sumbangan untuk kas kelas</td><td class="act"><a href="#">Edit</a><a href="#">Hapus</a></td></tr>
+        </tbody>
+      </table>
+      <div class="tablefoot"><span>Sampel 6 dari 27 transaksi • 25 pemasukan dan 2 pengeluaran</span><span>Pemasukan Rp600.000 • Pengeluaran Rp150.000</span></div>
+    </section>
+
+    <section class="panel">
+      <h3>Form Tambah Transaksi</h3>
+      <p class="sub">Form terpisah dari daftar. Pilih Edit untuk memuat transaksi yang sudah ada.</p>
+      <form onsubmit="return false">
+        <div class="row c3">
+          <div><label for="tg">Tanggal</label><input id="tg" type="text" placeholder="dd / mm / yyyy"></div>
+          <div><label for="jn">Jenis</label><select id="jn"><option>Pemasukan</option><option>Pengeluaran</option></select></div>
+          <div><label for="kt">Kategori</label><select id="kt"><option>Iuran Kas</option><option>Donasi</option><option>ATK</option><option>Kebersihan</option></select></div>
+        </div>
+        <div class="row" style="grid-template-columns:1fr 2fr;margin-top:14px">
+          <div><label for="nm">Nominal</label><input id="nm" type="text" value="Rp20.000"></div>
+          <div><label for="kg">Keterangan</label><input id="kg" type="text" placeholder="Masukkan keterangan transaksi"></div>
+        </div>
+        <div class="row" style="grid-template-columns:1fr 1fr;margin-top:14px">
+          <div><label for="sw">Siswa (khusus Iuran Kas)</label><select id="sw"><option>Pilih siswa / NIM</option></select></div>
+          <div><label for="pi">Periode Iuran (khusus Iuran Kas)</label><select id="pi"><option>Oktober 2026</option></select></div>
+        </div>
+        <div class="actions"><button class="btn" type="submit">Simpan</button><button class="btn ghost" type="reset">Batal</button></div>
+      </form>
+    </section>
+
+    <div class="hint">Untuk pembayaran iuran, pilih Pemasukan → Iuran Kas lalu isi Siswa dan Periode Iuran. Pembayaran yang sudah dicatat melalui Iuran Kelas tidak perlu ditambahkan lagi. Edit/Hapus transaksi iuran turut memperbarui status pembayaran siswa terkait.</div>
+  </main>
+
+  <footer class="footer"><span>Rancangan struktur &amp; fungsi • Bukan prototipe interaktif</span><span>06 Transaksi</span></footer>
+</body>
+</html>

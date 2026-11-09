@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>01 — Registrasi | Aplikasi Pengelolaan Iuran Kas Kelas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar"><span><b>01 / 07 — Registrasi</b></span><span>WIREFRAME DESKTOP • FR-01 · Registrasi akun</span></div>
+  <header class="appbar"><h1>Aplikasi Pengelolaan Iuran Kas Kelas</h1><span class="meta">Akses pengelola / bendahara kelas</span></header>
+
+  <main class="center">
+    <div class="auth">
+      <div>
+        <div class="eyebrow">Akses pengelola kas kelas</div>
+        <h2>Buat akun bendahara kelas</h2>
+        <p class="lead">Registrasi diperuntukkan bagi pengelola atau bendahara kelas untuk mencatat iuran siswa, mengelola transaksi, dan menyusun laporan kas.</p>
+        <div class="note">Akun ini digunakan untuk mengelola kas kelas, bukan akun siswa. Setelah mendaftar, gunakan username dan password untuk Login.</div>
+      </div>
+
+      <form class="card" onsubmit="return false">
+        <h3>Registrasi</h3>
+        <p class="sub">Lengkapi data untuk membuat akun pengelola.</p>
+        <label for="nama">Nama Lengkap</label>
+        <input id="nama" type="text" placeholder="Masukkan nama lengkap">
+        <label for="user">Username</label>
+        <input id="user" type="text" placeholder="Buat username">
+        <label for="pw">Password</label>
+        <input id="pw" type="password" placeholder="Masukkan password">
+        <label for="pw2">Konfirmasi Password</label>
+        <input id="pw2" type="password" placeholder="Ulangi password">
+        <button class="btn block" type="submit">Daftar</button>
+        <p class="switch">Sudah punya akun? <a href="02-login.html">Login</a></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer"><span>Rancangan struktur &amp; fungsi • Bukan prototipe interaktif</span><span>01 — Registrasi</span></footer>
+</body>
+</html>

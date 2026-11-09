@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>07 — Laporan | Aplikasi Pengelolaan Iuran Kas Kelas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar"><span><b>07 / 07 — Laporan</b></span><span>WIREFRAME DESKTOP • FR-09/10 · Rekap | FR-11 · Total &amp; saldo</span></div>
+  <header class="appbar"><h1>Aplikasi Pengelolaan Iuran Kas Kelas</h1><span class="meta">Kelas TI-1A | Bendahara</span></header>
+  <nav class="nav">
+    <a href="03-dashboard.html">Dashboard</a>
+    <a href="04-kategori.html">Kategori</a>
+    <a href="05-iuran-kelas.html">Iuran Kelas</a>
+    <a href="06-transaksi.html">Transaksi</a>
+    <a class="active" href="07-laporan.html">Laporan</a>
+    <a href="02-login.html">Keluar</a>
+  </nav>
+
+  <main>
+    <div class="page-title">
+      <h2>Laporan Kas Kelas</h2>
+      <p>Rekap pemasukan, pengeluaran, dan pembayaran iuran kelas TI-1A.</p>
+    </div>
+
+    <section class="panel">
+      <h3>Filter laporan</h3>
+      <div class="row c5" style="margin-top:12px">
+        <div><label for="pm">Periode Mulai</label><input id="pm" type="text" value="01 / 10 / 2026"></div>
+        <div><label for="ps">Periode Selesai</label><input id="ps" type="text" value="31 / 10 / 2026"></div>
+        <div><label for="kt">Kategori</label><select id="kt"><option>Semua Kategori</option><option>Iuran Kas</option><option>Donasi</option><option>ATK</option><option>Kebersihan</option></select></div>
+        <div><label for="jn">Jenis</label><select id="jn"><option>Semua Jenis</option><option>Pemasukan</option><option>Pengeluaran</option></select></div>
+        <button class="btn" type="button">Tampilkan</button>
+      </div>
+    </section>
+
+    <div class="tablefoot" style="margin:0 0 12px">
+      <b style="color:var(--ink);font-size:13px">Hasil laporan: 01–31 Oktober 2026</b>
+      <span>Semua kategori • Semua jenis • Saldo awal Rp0</span>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="k">Total Pemasukan</div><div class="v">Rp600.000</div><div class="d">25 transaksi diterima</div></div>
+      <div class="stat"><div class="k">Total Pengeluaran</div><div class="v">Rp150.000</div><div class="d">2 transaksi dikeluarkan</div></div>
+      <div class="stat"><div class="k">Saldo Kas</div><div class="v">Rp450.000</div><div class="d">Pemasukan − pengeluaran</div></div>
+    </div>
+
+    <div class="two">
+      <section class="panel">
+        <h3>Rekap Pemasukan</h3>
+        <p class="sub">Dana yang sudah diterima pada periode terpilih.</p>
+        <table>
+          <thead><tr><th>Kategori</th><th>Jumlah Transaksi</th><th>Total</th></tr></thead>
+          <tbody>
+            <tr><td>Iuran Kas</td><td>24</td><td>Rp480.000</td></tr>
+            <tr><td>Donasi</td><td>1</td><td>Rp120.000</td></tr>
+            <tr class="total"><td>Total Pemasukan</td><td>25</td><td>Rp600.000</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="panel">
+        <h3>Rekap Pengeluaran</h3>
+        <p class="sub">Dana yang sudah dikeluarkan pada periode terpilih.</p>
+        <table>
+          <thead><tr><th>Kategori</th><th>Jumlah Transaksi</th><th>Total</th></tr></thead>
+          <tbody>
+            <tr><td>ATK</td><td>1</td><td>Rp100.000</td></tr>
+            <tr><td>Kebersihan</td><td>1</td><td>Rp50.000</td></tr>
+            <tr class="total"><td>Total Pengeluaran</td><td>2</td><td>Rp150.000</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <section class="panel">
+      <h3>Ringkasan iuran Oktober 2026</h3>
+      <p class="sub">Iuran per siswa Rp20.000 • Jumlah siswa 30 • Pembayaran lunas 24 dari 30 siswa.</p>
+      <div class="three">
+        <div><div class="sub" style="margin:0">Target iuran</div><div class="big">Rp600.000</div><div class="sub">30 siswa × Rp20.000</div></div>
+        <div><div class="sub" style="margin:0">Iuran terkumpul</div><div class="big">Rp480.000</div><div class="sub">24 siswa lunas</div></div>
+        <div><div class="sub" style="margin:0">Tunggakan iuran</div><div class="big">Rp120.000</div><div class="sub">6 siswa belum bayar</div></div>
+      </div>
+    </section>
+
+    <div class="hint">Saldo kas = Rp600.000 − Rp150.000 = Rp450.000. Iuran terkumpul Rp480.000 sudah termasuk dalam Total Pemasukan, bukan ditambahkan lagi. Tunggakan Rp120.000 belum diterima, sehingga tidak termasuk pemasukan maupun saldo kas.</div>
+  </main>
+
+  <footer class="footer"><span>Rancangan struktur &amp; fungsi • Bukan prototipe interaktif</span><span>07 — Laporan</span></footer>
+</body>
+</html>
